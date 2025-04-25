@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Service | JESSIE AIRCRAFT SERVICES LLC</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/bookings.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="loader">
+      <svg viewBox="0 0 80 80">
+        <circle id="loader-circle" cx="40" cy="40" r="32"></circle>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="./images/logo.png" alt="JESSIE AIRCRAFT SERVICES LLC">
+        <span>JESSIE AIRCRAFT</span>
+      </div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="./index.html" class="nav-link">Home</a></li>
+          <li><a href="./index.html#about" class="nav-link">About</a></li>
+          <li><a href="service-details.html" class="nav-link">Services</a></li>
+          <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="index.html#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+          <li><a href="bookings.html" class="nav-link active">Book Now</a></li>
+        </ul>
+      </nav>
+      <button class="btn btn-primary header-cta">Book a Service</button>
+      <button class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-container">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="index.html#about" class="mobile-nav-link">About</a></li>
+        <li><a href="service-details.html" class="mobile-nav-link">Services</a></li>
+        <li><a href="index.html#gallery" class="mobile-nav-link">Gallery</a></li>
+        <li><a href="index.html#testimonials" class="mobile-nav-link">Testimonials</a></li>
+        <li><a href="index.html#contact" class="mobile-nav-link">Contact</a></li>
+        <li><a href="bookings.html" class="mobile-nav-link">Book Now</a></li>
+      </ul>
+      <div class="mobile-cta">
+        <button class="btn btn-primary">Book a Service</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Book Your Service</h1>
+        <div class="breadcrumbs">
+          <a href="./index.html">Home</a>
+          <span class="separator"><i class="fas fa-chevron-right"></i></span>
+          <span class="current">Book a Service</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Schedule Your Aircraft Service</h2>
+          <p class="section-subtitle">Complete the form below to book your premium aircraft interior service.</p>
+        </div>
+
+        <div class="booking-container">
+          <div class="booking-steps">
+            <div class="step active" data-step="1">
+              <div class="step-number">1</div>
+              <div class="step-text">
+                <h3>Service Selection</h3>
+                <p>Choose your service</p>
+              </div>
+            </div>
+            <div class="step" data-step="2">
+              <div class="step-number">2</div>
+              <div class="step-text">
+                <h3>Schedule</h3>
+                <p>Select date & time</p>
+              </div>
+            </div>
+            <div class="step" data-step="3">
+              <div class="step-number">3</div>
+              <div class="step-text">
+                <h3>Aircraft Details</h3>
+                <p>Provide specifications</p>
+              </div>
+            </div>
+            <div class="step" data-step="4">
+              <div class="step-number">4</div>
+              <div class="step-text">
+                <h3>Contact Information</h3>
+                <p>Your details</p>
+              </div>
+            </div>
+          </div>
+
+          <form id="bookingForm" class="booking-form">
+            <!-- Step 1: Service Selection -->
+            <div class="form-step active" data-step="1">
+              <h3>Select Your Service</h3>
+              <p class="step-description">Choose the service that best fits your aircraft's needs.</p>
+              
+              <div class="service-options">
+                <div class="service-option">
+                  <input type="radio" name="service" id="service-cleaning" value="interior-cleaning" checked>
+                  <label for="service-cleaning">
+                    <div class="option-icon"><i class="fas fa-spray-can-sparkles"></i></div>
+                    <div class="option-details">
+                      <h4>Interior Aircraft Cleaning</h4>
+                      <p>Comprehensive cleaning services for your entire aircraft interior.</p>
+                      <span class="price">Starting at $1,200</span>
+                    </div>
+                  </label>
+                </div>
+                
+                <div class="service-option">
+                  <input type="radio" name="service" id="service-detailing" value="cabin-detailing">
+                  <label for="service-detailing">
+                    <div class="option-icon"><i class="fas fa-couch"></i></div>
+                    <div class="option-details">
+                      <h4>Luxury Cabin Detailing</h4>
+                      <p>Premium detailing services for leather, wood, and metal surfaces.</p>
+                      <span class="price">Starting at $2,500</span>
+                    </div>
+                  </label>
+                </div>
+                
+                <div class="service-option">
+                  <input type="radio" name="service" id="service-design" value="design-services">
+                  <label for="service-design">
+                    <div class="option-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                    <div class="option-details">
+                      <h4>Design Enhancements</h4>
+                      <p>Custom interior design upgrades and modernization solutions.</p>
+                      <span class="price">Custom Quote</span>
+                    </div>
+                  </label>
+                </div>
+                
+                <div class="service-option">
+                  <input type="radio" name="service" id="service-maintenance" value="maintenance-program">
+                  <label for="service-maintenance">
+                    <div class="option-icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="option-details">
+                      <h4>Maintenance Program</h4>
+                      <p>Regular scheduled maintenance to keep your aircraft in pristine condition.</p>
+                      <span class="price">Starting at $950/month</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              
+              <div class="add-ons">
+                <h4>Additional Services</h4>
+                <div class="add-on-options">
+                  <div class="add-on">
+                    <input type="checkbox" name="add-ons" id="add-on-sanitize" value="sanitization">
+                    <label for="add-on-sanitize">
+                      <div class="add-on-details">
+                        <h5>Antimicrobial Sanitization</h5>
+                        <p>Complete sanitization with hospital-grade disinfectants.</p>
+                        <span class="price">+$350</span>
+                      </div>
+                    </label>
+                  </div>
+                  
+                  <div class="add-on">
+                    <input type="checkbox" name="add-ons" id="add-on-carpet" value="carpet-extraction">
+                    <label for="add-on-carpet">
+                      <div class="add-on-details">
+                        <h5>Deep Carpet Extraction</h5>
+                        <p>Advanced carpet cleaning and stain removal.</p>
+                        <span class="price">+$450</span>
+                      </div>
+                    </label>
+                  </div>
+                  
+                  <div class="add-on">
+                    <input type="checkbox" name="add-ons" id="add-on-protection" value="fabric-protection">
+                    <label for="add-on-protection">
+                      <div class="add-on-details">
+                        <h5>Fabric Protection Treatment</h5>
+                        <p>Stain-resistant coating for all fabric surfaces.</p>
+                        <span class="price">+$550</span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-navigation">
+                <button type="button" class="btn btn-primary next-step">Continue to Schedule</button>
+              </div>
+            </div>
+            
+            <!-- Step 2: Schedule -->
+            <div class="form-step" data-step="2">
+              <h3>Select Your Preferred Date & Time</h3>
+              <p class="step-description">Choose when you'd like us to service your aircraft.</p>
+              
+              <div class="date-time-selection">
+                <div class="form-group">
+                  <label for="service-date">Preferred Date</label>
+                  <input type="date" id="service-date" name="service-date" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="service-time">Preferred Time</label>
+                  <select id="service-time" name="service-time" required>
+                    <option value="" disabled selected>Select a time slot</option>
+                    <option value="morning">Morning (8:00 AM - 12:00 PM)</option>
+                    <option value="afternoon">Afternoon (12:00 PM - 4:00 PM)</option>
+                    <option value="evening">Evening (4:00 PM - 8:00 PM)</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="service-duration">Estimated Service Duration</label>
+                  <div class="duration-info">
+                    <i class="fas fa-clock"></i>
+                    <span id="duration-text">4-6 hours (standard service)</span>
+                  </div>
+                  <p class="note">Note: Duration may vary based on aircraft size and service requirements.</p>
+                </div>
+                
+                <div class="form-group">
+                  <label for="alternate-date">Alternate Date (Optional)</label>
+                  <input type="date" id="alternate-date" name="alternate-date">
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="special-instructions">Special Instructions</label>
+                <textarea id="special-instructions" name="special-instructions" rows="3" placeholder="Any specific requirements or instructions for our team?"></textarea>
+              </div>
+              
+              <div class="form-navigation">
+                <button type="button" class="btn btn-outline prev-step">Back</button>
+                <button type="button" class="btn btn-primary next-step">Continue to Aircraft Details</button>
+              </div>
+            </div>
+            
+            <!-- Step 3: Aircraft Details -->
+            <div class="form-step" data-step="3">
+              <h3>Aircraft Details</h3>
+              <p class="step-description">Provide information about your aircraft to help us prepare for the service.</p>
+              
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="aircraft-type">Aircraft Type</label>
+                  <select id="aircraft-type" name="aircraft-type" required>
+                    <option value="" disabled selected>Select aircraft type</option>
+                    <option value="light-jet">Light Jet</option>
+                    <option value="midsize-jet">Midsize Jet</option>
+                    <option value="heavy-jet">Heavy Jet</option>
+                    <option value="commercial">Commercial Aircraft</option>
+                    <option value="helicopter">Helicopter</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="aircraft-model">Aircraft Model</label>
+                  <input type="text" id="aircraft-model" name="aircraft-model" placeholder="e.g., Gulfstream G650" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="registration">Registration/Tail Number</label>
+                  <input type="text" id="registration" name="registration" placeholder="e.g., N12345" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="aircraft-size">Cabin Size</label>
+                  <select id="aircraft-size" name="aircraft-size" required>
+                    <option value="" disabled selected>Select cabin size</option>
+                    <option value="small">Small (4-6 passengers)</option>
+                    <option value="medium">Medium (7-9 passengers)</option>
+                    <option value="large">Large (10-16 passengers)</option>
+                    <option value="vip">VIP/Commercial (17+ passengers)</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label>Interior Features (Select all that apply)</label>
+                <div class="checkbox-group">
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="feature-leather" name="interior-features" value="leather">
+                    <label for="feature-leather">Leather Seating</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="feature-wood" name="interior-features" value="wood">
+                    <label for="feature-wood">Wood Veneer</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="feature-carpet" name="interior-features" value="carpet">
+                    <label for="feature-carpet">Custom Carpeting</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="feature-galley" name="interior-features" value="galley">
+                    <label for="feature-galley">Full Galley</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="feature-lavatory" name="interior-features" value="lavatory">
+                    <label for="feature-lavatory">Lavatory</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="feature-entertainment" name="interior-features" value="entertainment">
+                    <label for="feature-entertainment">Entertainment System</label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="service-location">Service Location</label>
+                <select id="service-location" name="service-location" required>
+                  <option value="" disabled selected>Select location</option>
+                  <option value="hangar">At Your Hangar</option>
+                  <option value="fbo">At FBO</option>
+                  <option value="airport">At Airport Terminal</option>
+                  <option value="jessie-facility">At JESSIE Facility</option>
+                </select>
+              </div>
+              
+              <div class="form-group location-details" style="display: none;">
+                <label for="location-address">Location Address</label>
+                <input type="text" id="location-address" name="location-address" placeholder="Enter the address where the aircraft will be serviced">
+              </div>
+              
+              <div class="form-navigation">
+                <button type="button" class="btn btn-outline prev-step">Back</button>
+                <button type="button" class="btn btn-primary next-step">Continue to Contact Information</button>
+              </div>
+            </div>
+            
+            <!-- Step 4: Contact Information -->
+            <div class="form-step" data-step="4">
+              <h3>Contact Information</h3>
+              <p class="step-description">Provide your contact details so we can confirm your booking.</p>
+              
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" name="first-name" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" name="last-name" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" required>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="company">Company/Organization (Optional)</label>
+                <input type="text" id="company" name="company">
+              </div>
+              
+              <div class="form-group">
+                <label>Preferred Contact Method</label>
+                <div class="radio-group">
+                  <div class="radio-item">
+                    <input type="radio" id="contact-email" name="contact-method" value="email" checked>
+                    <label for="contact-email">Email</label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                    <label for="contact-phone">Phone</label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="contact-text" name="contact-method" value="text">
+                    <label for="contact-text">Text Message</label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <div class="checkbox-item terms">
+                  <input type="checkbox" id="terms" name="terms" required>
+                  <label for="terms">I agree to the <a href="#" class="terms-link">Terms and Conditions</a></label>
+                </div>
+              </div>
+              
+              <div class="booking-summary">
+                <h4>Booking Summary</h4>
+                <div class="summary-content">
+                  <div class="summary-item">
+                    <span class="summary-label">Service:</span>
+                    <span class="summary-value" id="summary-service">Interior Aircraft Cleaning</span>
+                  </div>
+                  <div class="summary-item">
+                    <span class="summary-label">Date & Time:</span>
+                    <span class="summary-value" id="summary-datetime">Not selected</span>
+                  </div>
+                  <div class="summary-item">
+                    <span class="summary-label">Aircraft:</span>
+                    <span class="summary-value" id="summary-aircraft">Not specified</span>
+                  </div>
+                  <div class="summary-item">
+                    <span class="summary-label">Add-ons:</span>
+                    <span class="summary-value" id="summary-addons">None</span>
+                  </div>
+                  <div class="summary-item total">
+                    <span class="summary-label">Estimated Total:</span>
+                    <span class="summary-value" id="summary-total">$1,200</span>
+                  </div>
+                </div>
+                <p class="summary-note">Final pricing may vary based on aircraft inspection and specific requirements.</p>
+              </div>
+              
+              <div class="form-navigation">
+                <button type="button" class="btn btn-outline prev-step">Back</button>
+                <button type="submit" class="btn btn-primary">Complete Booking</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Book With Us -->
+    <section class="why-book">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Why Book With Us</h2>
+          <p class="section-subtitle">Experience the JESSIE AIRCRAFT SERVICES difference.</p>
+        </div>
+        
+        <div class="features-grid">
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="feature-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3>Certified Professionals</h3>
+            <p>Our team consists of certified aviation interior specialists with extensive training and experience.</p>
+          </div>
+          
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Flexible Scheduling</h3>
+            <p>We work around your flight schedule to ensure minimal downtime for your aircraft.</p>
+          </div>
+          
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Premium Products</h3>
+            <p>We use only aviation-approved, high-quality cleaning and restoration products.</p>
+          </div>
+          
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h3>24/7 Support</h3>
+            <p>Our customer service team is available around the clock for any questions or emergency services.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Find answers to common questions about our booking process and services.</p>
+        </div>
+        
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How far in advance should I book my service?</h3>
+              <span class="faq-icon"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>We recommend booking at least 2 weeks in advance for standard services and 3-4 weeks for comprehensive detailing or design services. However, we do offer expedited and emergency services when available.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What happens after I submit my booking request?</h3>
+              <span class="faq-icon"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>After submitting your booking, you'll receive an immediate confirmation email. Within 24 hours, one of our service coordinators will contact you to confirm all details and answer any questions you may have.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Can I modify or cancel my booking?</h3>
+              <span class="faq-icon"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, you can modify or cancel your booking up to 48 hours before your scheduled service without any penalty. Changes or cancellations within 48 hours may incur a fee. Please contact our customer service team to make any changes.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Do I need to be present during the service?</h3>
+              <span class="faq-icon"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>It's not required, but we recommend having a representative present at the beginning and end of the service. Our team is fully insured and trusted by major aviation companies, so you can rest assured your aircraft is in good hands.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What forms of payment do you accept?</h3>
+              <span class="faq-icon"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>We accept all major credit cards, bank transfers, and corporate purchase orders. Payment is typically processed after the service is completed and you've approved the work. For maintenance programs, we offer monthly or quarterly billing options.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="./images/logo-white.png" alt="JESSIE AIRCRAFT SERVICES LLC">
+          <span>JESSIE AIRCRAFT</span>
+        </div>
+        <p class="footer-description">Specializing in premium aircraft interior cleaning, detailing, and design services for private and commercial aircraft.</p>
+        <div class="footer-social">
+          <a href="#" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div class="footer-middle">
+        <div class="footer-nav">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="service-details.html">Services</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="index.html#testimonials">Testimonials</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="bookings.html">Book Now</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="service-details.html#interior-cleaning">Interior Cleaning</a></li>
+            <li><a href="service-details.html#cabin-detailing">Cabin Detailing</a></li>
+            <li><a href="service-details.html#design-services">Design Services</a></li>
+            <li><a href="service-details.html#maintenance-programs">Maintenance Programs</a></li>
+            <li><a href="service-details.html#emergency-services">Emergency Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Subscribe to our newsletter for the latest updates and offers.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address">
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">&copy; <span id="currentYear">2023</span> JESSIE AIRCRAFT SERVICES LLC. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-tagline">
+        <p>Interior perfection, mile after mile.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+  <script src="./js/bookings.js"></script>
+</body>
+</html>
