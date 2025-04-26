@@ -1,21 +1,44 @@
 // Wait for DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-  // Preloader
-  const preloader = document.querySelector(".preloader")
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      preloader.classList.add("hidden")
-    }, 500)
-  })
+  // Fix for 100vh in mobile browsers
+  function setVhVariable() {
+    const vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty("--vh", `${vh}px`)
+  }
 
-  // Mobile Menu Toggle
+  // Set the variable initially
+  setVhVariable()
+
+  // Update the variable when the window is resized
+  window.addEventListener("resize", setVhVariable)
+
+  // Prevent body scrolling when mobile menu is open
   const menuToggle = document.querySelector(".menu-toggle")
   const mobileMenu = document.querySelector(".mobile-menu")
 
   menuToggle.addEventListener("click", function () {
     this.classList.toggle("active")
     mobileMenu.classList.toggle("active")
-    document.body.classList.toggle("no-scroll")
+
+    // Toggle no-scroll class on body
+    if (mobileMenu.classList.contains("active")) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = ""
+    }
+  })
+
+  // Close mobile menu when clicking outside
+  document.addEventListener("click", (event) => {
+    if (
+      mobileMenu.classList.contains("active") &&
+      !mobileMenu.contains(event.target) &&
+      !menuToggle.contains(event.target)
+    ) {
+      mobileMenu.classList.remove("active")
+      menuToggle.classList.remove("active")
+      document.body.style.overflow = ""
+    }
   })
 
   // Close mobile menu when clicking on a link
@@ -24,8 +47,22 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", () => {
       menuToggle.classList.remove("active")
       mobileMenu.classList.remove("active")
-      document.body.classList.remove("no-scroll")
+      document.body.style.overflow = ""
     })
+  })
+
+  // Add passive event listeners for better scroll performance
+  const passiveEvents = ["touchstart", "touchmove", "scroll", "wheel"]
+  passiveEvents.forEach((event) => {
+    window.addEventListener(event, null, { passive: true })
+  })
+
+  // Preloader
+  const preloader = document.querySelector(".preloader")
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      preloader.classList.add("hidden")
+    }, 500)
   })
 
   // Sticky Header
