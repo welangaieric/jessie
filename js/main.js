@@ -1,16 +1,16 @@
 // Wait for DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
   // Fix for 100vh in mobile browsers
-  function setVhVariable() {
-    const vh = window.innerHeight * 0.01
-    document.documentElement.style.setProperty("--vh", `${vh}px`)
-  }
+  // function setVhVariable() {
+  //   const vh = window.innerHeight * 0.01
+  //   document.documentElement.style.setProperty("--vh", `${vh}px`)
+  // }
 
-  // Set the variable initially
-  setVhVariable()
+  // // Set the variable initially
+  // setVhVariable()
 
-  // Update the variable when the window is resized
-  window.addEventListener("resize", setVhVariable)
+  // // Update the variable when the window is resized
+  // window.addEventListener("resize", setVhVariable)
 
   // Prevent body scrolling when mobile menu is open
   const menuToggle = document.querySelector(".menu-toggle")
