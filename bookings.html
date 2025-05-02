@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book a Service | JESSIE AIRCRAFT SERVICES LLC</title>
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/bookings.css">
+  <!-- <link rel="stylesheet" href="./css/bookings.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,54 +20,61 @@
       </svg>
     </div>
   </div>
-
-    <!-- Header -->
-    <header class="header">
-      <div class="container">
-        <div class="logo">
-          <img src="./images/logo.png" alt="JESSIE AIRCRAFT SERVICES LLC" />
-          <!-- <span>JESSIE AIRCRAFT</span> -->
-        </div>
-        <nav class="nav">
-          <ul class="nav-list">
-            <li><a href="#home" class="nav-link active">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#services" class="nav-link">Services</a></li>
-            <li><a href="#gallery" class="nav-link">Gallery</a></li>
-            <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-          </ul>
-        </nav>
-        <a href="index.html#contact"
-          ><button class="btn btn-primary header-cta">Contact Us</button></a
-        >
-        <button class="menu-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+  <div class="banner">
+    <div class="container">
+      <p><i class="fa-solid fa-phone"></i> Tel: +12345677888</p>
+      <div class="more-info">
+        <p><i class="fa-solid fa-envelope"></i> Email: info@jessieaircraftcleaning.com</p>
+        <p><i class="fa-solid fa-location-dot"></i> Location: 123ABC, somewhere</p>
       </div>
-    </header>
+     
+    </div>
+  
+  </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="./images/logo.png" alt="JESSIE AIRCRAFT SERVICES LLC">
+        <span>JESSIE AIRCRAFT CLEANING SERVICES</span>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-      <div class="mobile-menu-container">
-        <ul class="mobile-nav-list">
-          <li><a href="#home" class="mobile-nav-link">Home</a></li>
-          <li><a href="#about" class="mobile-nav-link">About</a></li>
-          <li><a href="#services" class="mobile-nav-link">Services</a></li>
-          <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
-          <li>
-            <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
-          </li>
+      </div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="./index.html" class="nav-link">Home</a></li>
+          <li><a href="./index.html#about" class="nav-link">About</a></li>
+          <li><a href="./index.html#services" class="nav-link active">Services</a></li>
+          <li><a href="./index.html#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="./index.html#testimonials" class="nav-link">Testimonials</a></li>
+       
         </ul>
-        <div class="mobile-cta">
-          <a href="index.html#contact"
-            ><button class="btn btn-primary header-cta">Contact Us</button></a
-          >
-        </div>
+      </nav>
+      <a href="./index.html#contact"><button class="btn btn-primary header-cta">Contact Us</button></a>
+
+      <button class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-container">
+      <ul class="mobile-nav-list">
+        <li><a href="./index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="./index.html#about" class="mobile-nav-link">About</a></li>
+        <li><a href="./index.html#services" class="nav-link active">Services</a></li>
+        <li><a href="./index.html#gallery" class="mobile-nav-link">Gallery</a></li>
+        <li><a href="./index.html#testimonials" class="mobile-nav-link">Testimonials</a></li>
+   
+      </ul>
+      <div class="mobile-cta">
+        <a href="./index.html#contact"><button class="btn btn-primary header-cta">Contact Us</button></a>
       </div>
     </div>
-
+  </div>
 
   <!-- Main Content -->
   <main>
@@ -608,6 +615,14 @@
                 <a href="service-details.html#design-services">Disinfection</a>
               </li>
             </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Subscribe to our newsletter for the latest updates and offers.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address">
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
           </div>
         
       </div>
