@@ -1,16 +1,16 @@
 // Wait for DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
   // Fix for 100vh in mobile browsers
-  function setVhVariable() {
-    const vh = window.innerHeight * 0.01
-    document.documentElement.style.setProperty("--vh", `${vh}px`)
-  }
+  // function setVhVariable() {
+  //   const vh = window.innerHeight * 0.01
+  //   document.documentElement.style.setProperty("--vh", `${vh}px`)
+  // }
 
-  // Set the variable initially
-  setVhVariable()
+  // // Set the variable initially
+  // setVhVariable()
 
-  // Update the variable when the window is resized
-  window.addEventListener("resize", setVhVariable)
+  // // Update the variable when the window is resized
+  // window.addEventListener("resize", setVhVariable)
 
   // Prevent body scrolling when mobile menu is open
   const menuToggle = document.querySelector(".menu-toggle")
@@ -69,13 +69,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header")
   const headerHeight = header.offsetHeight
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      header.classList.add("scrolled")
-    } else {
-      header.classList.remove("scrolled")
-    }
-  })
+  // window.addEventListener("scroll", () => {
+  //   if (window.scrollY > 50) {
+  //     header.classList.add("scrolled")
+  //   } else {
+  //     header.classList.remove("scrolled")
+  //   }
+  // })
 
   // Smooth Scrolling for Anchor Links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -221,41 +221,41 @@ document.addEventListener("DOMContentLoaded", () => {
     showTestimonialSlide(newIndex)
   }, 5000)
 
-  // Stats Counter Animation
-  const statNumbers = document.querySelectorAll(".stat-number")
-  let statsAnimated = false
+  // // Stats Counter Animation
+  // const statNumbers = document.querySelectorAll(".stat-number")
+  // let statsAnimated = false
 
-  function animateStats() {
-    if (statsAnimated) return
+  // function animateStats() {
+  //   if (statsAnimated) return
 
-    const statsSection = document.querySelector(".stats")
-    const statsSectionTop = statsSection.getBoundingClientRect().top
-    const windowHeight = window.innerHeight
+  //   const statsSection = document.querySelector(".stats")
+  //   const statsSectionTop = statsSection.getBoundingClientRect().top
+  //   const windowHeight = window.innerHeight
 
-    if (statsSectionTop < windowHeight * 0.75) {
-      statsAnimated = true
+  //   if (statsSectionTop < windowHeight * 0.75) {
+  //     statsAnimated = true
 
-      statNumbers.forEach((stat) => {
-        const targetValue = Number.parseInt(stat.dataset.count)
-        let currentValue = 0
-        const duration = 2000 // 2 seconds
-        const increment = targetValue / (duration / 16) // 60fps
+  //     statNumbers.forEach((stat) => {
+  //       const targetValue = Number.parseInt(stat.dataset.count)
+  //       let currentValue = 0
+  //       const duration = 2000 // 2 seconds
+  //       const increment = targetValue / (duration / 16) // 60fps
 
-        const counter = setInterval(() => {
-          currentValue += increment
+  //       const counter = setInterval(() => {
+  //         currentValue += increment
 
-          if (currentValue >= targetValue) {
-            stat.textContent = targetValue
-            clearInterval(counter)
-          } else {
-            stat.textContent = Math.floor(currentValue)
-          }
-        }, 16)
-      })
-    }
-  }
+  //         if (currentValue >= targetValue) {
+  //           stat.textContent = targetValue
+  //           clearInterval(counter)
+  //         } else {
+  //           stat.textContent = Math.floor(currentValue)
+  //         }
+  //       }, 16)
+  //     })
+  //   }
+  // }
 
-  window.addEventListener("scroll", animateStats)
+  // window.addEventListener("scroll", animateStats)
 
   // Contact Form Submission
   const contactForm = document.getElementById("contactForm")
