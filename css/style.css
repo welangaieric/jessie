@@ -191,9 +191,9 @@ button {
 /* ===== UTILITIES ===== */
 .container {
   width: 90%;
-  /* max-width: var(--container-max-width); 
+  /* max-width: var(--container-max-width); */
    margin: 0 auto; 
-   padding: 0 var(--container-padding); */
+  /*  padding: 0 var(--container-padding); */
 }
 
 .btn {
@@ -5098,5 +5098,493 @@ section {
 
   .team-section {
     /* padding: 70px 20px; */
+  }
+}
+/* ===== COCKPIT & FLIGHT DECK DETAILING PAGE STYLES ===== */
+
+/* Hero Section */
+.cockpit-hero {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--white);
+}
+
+.cockpit-hero-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cockpit-hero-content .tagline {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--primary);
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.3;
+  position: relative;
+}
+
+.cockpit-hero-content .tagline::before,
+.cockpit-hero-content .tagline::after {
+  content: '"';
+  font-size: 3rem;
+  color: var(--primary-light);
+  opacity: 0.3;
+  position: absolute;
+}
+
+.cockpit-hero-content .tagline::before {
+  top: -20px;
+  left: -20px;
+}
+
+.cockpit-hero-content .tagline::after {
+  bottom: -40px;
+  right: -20px;
+}
+
+.cockpit-hero-image {
+  margin-top: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.cockpit-hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Introduction Section */
+.cockpit-intro {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--gray-50);
+}
+
+.cockpit-intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cockpit-intro-content p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--gray-700);
+  margin-bottom: var(--spacing-lg);
+}
+
+.cockpit-intro-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Contamination Management Section */
+.cockpit-contamination {
+  padding: var(--spacing-4xl) 0;
+  background-color: var(--white);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cockpit-contamination-content {
+  display: grid;
+  /* grid-template-columns: 1fr; */
+  gap: var(--spacing-2xl);
+  text-align: center;
+}
+
+.cockpit-contamination-text p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--gray-700);
+  margin-bottom: var(--spacing-md);
+}
+
+.cockpit-contamination-text .highlight {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+  padding: var(--spacing-md);
+  width: 100%;
+  text-align: left;
+  background-color: rgba(10, 77, 46, 0.05);
+  border-left: 4px solid var(--primary);
+  border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+}
+
+.cockpit-contamination-image {
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.cockpit-contamination-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Why Clean Section */
+.cockpit-why-clean {
+  padding: var(--spacing-4xl) 0;
+  background-color: var(--gray-50);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cockpit-why-clean-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* grid-template-columns: 1fr; */
+  gap: var(--spacing-2xl);
+  text-align: center;
+}
+
+.cockpit-why-clean-image {
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  order: 1;
+}
+
+.cockpit-why-clean-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cockpit-why-clean-text {
+  /* order: 2; */
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cockpit-why-clean-text p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--gray-700);
+  margin-bottom: var(--spacing-lg);
+}
+
+.cockpit-benefits-list {
+  list-style: none;
+  padding: 0;
+  /* width: 80%; */
+
+}
+
+.cockpit-benefits-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.1rem;
+  color: var(--gray-700);
+}
+
+.cockpit-benefits-list li i {
+  color: var(--primary);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Equipment Care Section */
+.cockpit-equipment {
+  padding: var(--spacing-4xl) 0;
+  background-color: var(--white);
+}
+
+.cockpit-equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.cockpit-equipment-item {
+  background-color: var(--white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.cockpit-equipment-item:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-xl);
+}
+
+.cockpit-equipment-item .equipment-icon {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(10, 77, 46, 0.1);
+  border-radius: var(--border-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.cockpit-equipment-item .equipment-icon i {
+  font-size: 1.75rem;
+  color: var(--primary);
+}
+
+.cockpit-equipment-item h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--gray-900);
+}
+
+.cockpit-equipment-item p {
+  color: var(--gray-600);
+}
+
+/* Process Section */
+.cockpit-process {
+  padding: var(--spacing-4xl) 0;
+  background-color: var(--gray-50);
+}
+
+.cockpit-process-steps {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cockpit-process-steps .process-step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px dashed var(--gray-200);
+}
+
+.cockpit-process-steps .process-step:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.cockpit-process-steps .step-number {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: var(--border-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.cockpit-process-steps .step-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--gray-900);
+}
+
+.cockpit-process-steps .step-content p {
+  font-size: 1.1rem;
+  color: var(--gray-700);
+  margin: 0;
+}
+
+/* FAQ Section */
+.cockpit-faq {
+  padding: var(--spacing-4xl) 0;
+  background-color: var(--white);
+}
+
+.cockpit-faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cockpit-faq-container .faq-item {
+  margin-bottom: var(--spacing-md);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+.cockpit-faq-container .faq-question {
+  padding: var(--spacing-lg);
+  background-color: var(--gray-50);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cockpit-faq-container .faq-question h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: var(--gray-800);
+  font-weight: 500;
+}
+
+.cockpit-faq-container .faq-toggle {
+  color: var(--primary);
+  transition: transform var(--transition-normal);
+}
+
+.cockpit-faq-container .faq-item.active .faq-toggle {
+  transform: rotate(45deg);
+}
+
+.cockpit-faq-container .faq-answer {
+  padding: 0 var(--spacing-lg);
+  max-height: 0;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.cockpit-faq-container .faq-item.active .faq-answer {
+  padding: 0 var(--spacing-lg) var(--spacing-lg);
+  max-height: 200px;
+}
+
+.cockpit-faq-container .faq-answer p {
+  margin: 0;
+  color: var(--gray-700);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .cockpit-hero-content .tagline {
+    font-size: 2.5rem;
+  }
+
+  .cockpit-contamination-content {
+    /* grid-template-columns: 1fr 1fr; */
+    align-items: center;
+  }
+
+  .cockpit-why-clean-content {
+    /* grid-template-columns: 1fr 1fr; */
+    align-items: center;
+  }
+
+  .cockpit-why-clean-image {
+    order: 2;
+  }
+
+  .cockpit-why-clean-text {
+    order: 1;
+  }
+
+  .cockpit-equipment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .cockpit-hero-content .tagline {
+    font-size: 3rem;
+  }
+
+  .cockpit-equipment-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 767px) {
+  .cockpit-hero {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .cockpit-hero-content .tagline {
+    font-size: 1.75rem;
+  }
+
+  .cockpit-hero-content .tagline::before,
+  .cockpit-hero-content .tagline::after {
+    font-size: 2rem;
+  }
+
+  .cockpit-hero-content .tagline::before {
+    top: -10px;
+    left: -10px;
+  }
+
+  .cockpit-hero-content .tagline::after {
+    bottom: -20px;
+    right: -10px;
+  }
+
+  .cockpit-intro-content p,
+  .cockpit-contamination-text p,
+  .cockpit-why-clean-text p {
+    font-size: 1rem;
+  }
+
+  .cockpit-contamination-text .highlight {
+    font-size: 1.1rem;
+  }
+
+  .cockpit-benefits-list li {
+    font-size: 1rem;
+  }
+
+  .cockpit-equipment-item {
+    padding: var(--spacing-lg);
+  }
+
+  .cockpit-equipment-item .equipment-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cockpit-process-steps .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+
+  .cockpit-process-steps .step-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .cockpit-process-steps .step-content p {
+    font-size: 1rem;
+  }
+
+  .cockpit-faq-container .faq-question h3 {
+    font-size: 1rem;
+  }
+
+  .cockpit-faq-container .faq-answer p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cockpit-hero-content .tagline {
+    font-size: 1.5rem;
+  }
+
+  .cockpit-equipment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cockpit-process-steps .process-step {
+    gap: var(--spacing-md);
   }
 }
