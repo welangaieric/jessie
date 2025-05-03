@@ -535,14 +535,7 @@ main {
   flex-wrap: wrap;
   gap: var(--spacing-md);
 }
-.hero-cta .btn{
-  border: 2px solid var(--primary-dark);
-  color: var(--primary-dark);
-}
-.hero-cta .btn:hover{
-  background-color: var(--primary-dark);
-  color: var(--white);
-}
+
 .scroll-indicator {
   position: absolute;
   bottom: 30px;
@@ -822,6 +815,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  overflow-x: hidden;
 }
 .services .btn-outline {
   border: var(--primary) 2px solid;
@@ -935,7 +929,7 @@ main {
 }
 
 .gallery-container {
-  max-width: 900px;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -1341,13 +1335,14 @@ main {
   width: 100%;
   justify-content: center;
   align-items: center;
+overflow-x: hidden;
+
 }
 
 .contact-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-
   gap: var(--spacing-2xl);
 }
 
@@ -3038,6 +3033,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 .threats-content {
   display: grid;
