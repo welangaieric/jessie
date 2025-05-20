@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function initBookingForm() {
       // Show the first step
       showStep(0)
-  
       // Add event listeners to next buttons
       nextButtons.forEach((button) => {
         button.addEventListener("click", () => {
@@ -28,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
           showStep(currentStep - 2)
         })
       })
-  
       // Service selection change
       const serviceOptions = document.querySelectorAll('input[name="service"]')
       serviceOptions.forEach((option) => {
@@ -84,21 +82,19 @@ document.addEventListener("DOMContentLoaded", () => {
       formSteps.forEach((step) => {
         step.classList.remove("active")
       })
-  
+      console.log(formSteps[stepIndex])
       // Remove active class from all step indicators
       steps.forEach((step) => {
         step.classList.remove("active")
       })
-  
+    
       // Show the current step
-      const currentStepIndex = stepIndex
-      const nextStepIndex = currentStepIndex + 1
-  
-      if (formSteps[nextStepIndex]) {
-        formSteps[nextStepIndex].classList.add("active")
-        steps[nextStepIndex].classList.add("active")
+      if (formSteps[stepIndex]) {
+        formSteps[stepIndex].classList.add("active")
+        steps[stepIndex].classList.add("active")
       }
     }
+    
   
     // Validate the current step
     function validateStep(stepIndex) {
@@ -237,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>Thank you for booking with JESSIE AIRCRAFT SERVICES. We've sent a confirmation email to ${formValues.email}.</p>
           <p>Our team will contact you shortly to confirm all details.</p>
           <div class="booking-reference">
-            <p>Booking Reference: <strong>JAS-${Math.floor(100000 + Math.random() * 900000)}</strong></p>
+            <p>Booking Reference: <strong>JACS-${Math.floor(100000 + Math.random() * 900000)}</strong></p>
           </div>
           <a href="index.html" class="btn btn-primary">Return to Home</a>
         `
