@@ -3500,11 +3500,12 @@ section {
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  height: 500px;
 }
 
 .cabin-hero-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -3653,11 +3654,12 @@ section {
 }
 
 .specialized-area {
-  display: grid;
+  display: block;
   grid-template-columns: 1fr;
   gap: var(--spacing-xl);
   margin-bottom: var(--spacing-3xl);
   align-items: center;
+  text-align: center;
 }
 
 .specialized-area:last-child {
@@ -3668,6 +3670,8 @@ section {
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  height: 500px;
+  display: none;
 }
 
 .area-image img {
@@ -3717,14 +3721,14 @@ section {
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  height: 100%;
 }
 
 .carpet-care-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
-
 .carpet-care-details {
   padding: var(--spacing-xl);
   background-color: var(--white);
