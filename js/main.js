@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Before/After Toggle
   const beforeAfterToggle = document.getElementById("before-after-toggle")
-  // const toggleSwitch = beforeAfterToggle.querySelector(".toggle-switch")
+  const toggleSwitch = beforeAfterToggle.querySelector(".toggle-switch")
   const toggleTexts = beforeAfterToggle.querySelectorAll(".toggle-text")
   const beforeImages = document.querySelectorAll(".image-container.before")
   const afterImages = document.querySelectorAll(".image-container.after")
